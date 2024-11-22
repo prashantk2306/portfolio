@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Navigation Bar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* Smooth scroll effect */
+        html {
+          scroll-behavior: smooth;
+        }
+    
+       
+      </style>
+    
+</head>
+<body class="bg-[#0a192f] overflow-x-hidden">
+
+    <!-- Navigation Bar -->
+    <nav class="h-20 w-full fixed top-0 left-0 bg-[#0a192f] flex items-center justify-between p-5 text-xl font-mono font-bold text-center border-b border-gray-700 z-50">
+        <div>
+            <div class="relative w-16 h-fit">
+                <img src="./logo.png" alt="Logo" class="w-16 h-fit rounded-lg shadow shadow-slate-400">
+            </div>
+        </div>
+    
+        <div class="md:hidden">
+            <button id="menu-btn" class="text-gray-300 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    
+        <div id="menu" class="hidden md:flex flex-col md:flex-row gap-5 items-center absolute md:static top-20 left-0 w-full md:w-auto bg-[#0a192f] md:bg-transparent p-5 md:p-0 z-40">
+            <!-- Home Link -->
+            <div class="nav-item cursor-pointer p-1 relative group">
+                <a href="#home" class="nav-link relative text-gray-300 group-hover:text-gray-100 transition-colors duration-300">
+                    <span class="first-char text-gray-300 group-hover:text-orange-400 transition-colors duration-300">H</span>ome
+                    <span class="absolute left-1/2 transform -translate-x-1/2 bottom-0 bg-white h-[1px] w-0 group-hover:w-full transition-all duration-300"></span>
+                </a>
+            </div>
+    
+            <!-- About Link -->
+            <div class="nav-item cursor-pointer p-1 relative group">
+                <a href="#about" class="nav-link relative text-gray-300 group-hover:text-gray-100 transition-colors duration-300">
+                    <span class="first-char text-gray-300 group-hover:text-orange-400 transition-colors duration-300">A</span>bout
+                    <span class="absolute left-1/2 transform -translate-x-1/2 bottom-0 bg-white h-[1px] w-0 group-hover:w-full transition-all duration-300"></span>
+                </a>
+            </div>
+    
+            <!-- Skills Link -->
+            <div class="nav-item cursor-pointer p-1 relative group">
+                <a href="#skills" class="nav-link relative text-gray-300 group-hover:text-gray-100 transition-colors duration-300">
+                    <span class="first-char text-gray-300 group-hover:text-orange-400 transition-colors duration-300">S</span>kills
+                    <span class="absolute left-1/2 transform -translate-x-1/2 bottom-0 bg-white h-[1px] w-0 group-hover:w-full transition-all duration-300"></span>
+                </a>
+            </div>
+    
+            <!-- Projects Link -->
+            <div class="nav-item cursor-pointer p-1 relative group">
+                <a href="#projects" class="nav-link relative text-gray-300 group-hover:text-gray-100 transition-colors duration-300">
+                    <span class="first-char text-gray-300 group-hover:text-orange-400 transition-colors duration-300">P</span>rojects
+                    <span class="absolute left-1/2 transform -translate-x-1/2 bottom-0 bg-white h-[1px] w-0 group-hover:w-full transition-all duration-300"></span>
+                </a>
+            </div>
+    
+            <!-- Contact Link -->
+            <div class="nav-item cursor-pointer p-1 relative group">
+                <a href="#contact" class="nav-link relative text-gray-300 group-hover:text-gray-100 transition-colors duration-300">
+                    <span class="first-char text-gray-300 group-hover:text-orange-400 transition-colors duration-300">C</span>ontact
+                    <span class="absolute left-1/2 transform -translate-x-1/2 bottom-0 bg-white h-[1px] w-0 group-hover:w-full transition-all duration-300"></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+    
+<!-- Page 1 -->
+<div id="home" class="min-h-screen w-full items-center pt-14 flex flex-wrap md:flex-nowrap">
+    <!-- Left Section -->
+    <div id="left" class="w-full md:w-[65%] h-auto md:h-full px-5 md:pl-28 pt-3 flex flex-col justify-center">
+        <div>
+            <span class="text-3xl font-mono p-2 font-bold text-orange-400">Hi<span class="text-white"></span></span>
+            <span class="text-3xl font-mono p-2 font-bold text-zinc-400">my name is</span>
+        </div>
+        <div>
+            <h1 class="font-mono text-5xl md:text-8xl font-bold text-white">Prashant kr Sharma</h1>
+        </div>
+        <div>
+            <h1 id="role" class="text-4xl md:text-7xl font-extrabold font-mono text-zinc-500">I build things for the web.</h1>
+        </div>
+    </div>
+    <!-- Right Section -->
+    <div id="right" class="w-full md:w-[35%] h-auto md:h-full flex justify-center items-center">
+        <div class="overflow-hidden h-72 md:h-96 w-fit flex justify-center items-center">
+            <img src="./newpic.png" alt="" class="border-l-4 border-1">
+        </div>
+    </div>
+</div>  
+
+<!-- Page 2 -->
+<div id="about" class="w-full border-x-rose-200">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-52 px-5 md:px-28">
+
+        <!-- About Me Section -->
+        <div class="h-auto w-full">
+            <section class="about-me py-5 text-white">
+                <div class="max-w-4xl text-start">
+                    <div class="relative group w-fit">
+                        <h2 id="about-heading" class="text-2xl md:text-4xl font-mono font-bold text-gray-400 mb-4">
+                            <span class="text-orange-400">A</span>bout Me
+                            <span class="absolute left-1/2 transform -translate-x-1/2 bottom-0 bg-white h-[2px] w-0 group-hover:w-full transition-all duration-300"></span>
+                        </h2>
+                    </div>
+                    <p class="text-base md:text-xl font-mono mb-6">
+                        Hi, I'm <span class="text-orange-400 font-bold">P</span>rashant kr Sharma, a passionate web developer with a strong foundation in both front-end and back-end technologies. 
+                        I specialize in creating intuitive and dynamic websites using <span class="text-orange-400">H</span>TML, <span class="text-orange-400">C</span>SS, and <span class="text-orange-400">T</span>ailwindCSS for the front-end, while working with <span class="text-orange-400">N</span>ode.js, <span class="text-orange-400">E</span>xpress, and <span class="text-orange-400">M</span>ongoDB for the back-end.
+                    </p>
+                    <p class="text-sm md:text-lg font-mono">
+                        When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, and working on personal projects to sharpen my skills. I'm always excited to take on new challenges and grow as a developer.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <!-- About Me Image -->
+        <div class="flex justify-center md:justify-start items-center">
+            <div class="relative w-full md:w-auto h-80">
+                <img src="./port_desing.png" alt="Design Image" class="object-contain w-full h-full filter -hue-rotate-15 contrast-200">
+            </div>
+        </div>
+    </div>
+
+    <!-- SVG + Workshop Section -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 px-5 md:px-10 md:pl-32 md:pr-4">
+
+        <!-- SVG Section -->
+        <div class="flex justify-center md:justify-start">
+            <svg viewBox="0 0 300 300" height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+                <!-- Circular Path -->
+                <path id="circlePath" 
+                      d="M150,150 m-125,0 a125,125 0 1,1 250,0 a125,125 0 1,1 -250,0" 
+                      fill="none" 
+                      stroke="none">
+                </path>
+                <!-- Text on Path -->
+                <text fill="#fff" font-size="18" text-anchor="middle">
+                    <textPath href="#circlePath" startOffset="50%">
+                        I am a web developer creating responsive websites and modern applications for seamless user experiences.
+                    </textPath>
+                </text>
+                <!-- Star -->
+                <g stroke="#f97316" fill="none" stroke-width="4" transform="translate(150, 155)">
+                    <polygon points="0,-50 14,-15 47,-15 23,7 29,40 0,25 -29,40 -23,7 -47,-15 -14,-15" />
+                </g>
+            </svg>
+        </div>
+
+        <!-- Workshop Section -->
+        <div class="flex flex-col md:flex-row items-center justify-center text-white py-10 md:pr-12">
+            <div class="w-full md:w-1/2 text-center md:text-left mb-6 md:mb-0">
+                <h3 class="text-2xl md:text-3xl font-bold mb-4">
+                    <span class="text-orange-400">C</span>RISP Workshop
+                </h3>
+                <p class="text-base md:text-lg">
+                    I participated in the <span class="text-orange-400">C</span>RISP-organized <span class="text-orange-400">C++</span> workshop, 
+                    where I honed my skills and learned advanced C++ concepts. Winning the <span class="text-orange-400">F</span>irst <span class="text-orange-400">P</span>rize 
+                    in this workshop was a proud moment and a major milestone in my technical journey.
+                </p>
+            </div>
+            <div class="bg-gray-700 md:w-80 ml-0 md:ml-10 rounded-lg">
+                <img src="./crisp.jpg" alt="CRISP Workshop" class="rounded-xl w-full">
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- page 3 -->
+<!-- Skills Section -->
+ 
+<div id="skills">   
+<section id="skills" class="py-16 md:pl-28 md:pr-12 bg-gray-200 rounded-t-2xl">
+    <div class="max-w-8xl   mx-auto px-4">
+        <div class="text-center ">
+            <div class="relative group inline-block mb-7 ">
+                <h2 id="projects-heading" class="text-4xl font-mono font-bold text-slate-700 ">
+                    <span class="text-orange-400">S</span>kills 
+                    <span class="absolute left-1/2 transform -translate-x-1/2 bottom-0 bg-orange-500 h-[3px] w-0 group-hover:w-full transition-all duration-300"></span>
+                </h2>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 ">
+            
+            <!-- Skill 1: C Language -->
+            <div class="bg-slate-600 p-6 rounded-lg shadow-lg text-center">
+                <h3 class="text-xl font-semibold text-orange-500 mb-4">C Language</h3>
+                <p class="text-gray-300">Strong foundation in C programming, algorithms, and data structures.</p>
+            </div>
+
+            <!-- Skill 2: HTML -->
+            <div class="bg-slate-600 p-6 rounded-lg shadow-lg text-center">
+                <h3 class="text-xl font-semibold text-orange-500 mb-4">HTML</h3>
+                <p class="text-gray-300">Expert in creating structured web pages using HTML5, semantic elements, and accessibility best practices.</p>
+            </div>
+
+            <!-- Skill 3: CSS -->
+            <div class="bg-slate-600 p-6 rounded-lg shadow-lg text-center">
+                <h3 class="text-xl font-semibold text-orange-500 mb-4">CSS</h3>
+                <p class="text-gray-300">Experienced with responsive design, Flexbox, Grid, and animations using CSS3.</p>
+            </div>
+
+            <!-- Skill 4: TailwindCSS -->
+            <div class="bg-slate-600 p-6 rounded-lg shadow-lg text-center">
+                <h3 class="text-xl font-semibold text-orange-500 mb-4">TailwindCSS</h3>
+                <p class="text-gray-300">Efficiently building modern, responsive designs with utility-first CSS using TailwindCSS.</p>
+            </div>
+
+            <!-- Skill 5: React.js -->
+            <div class="bg-slate-600 p-6 rounded-lg shadow-lg text-center">
+                <h3 class="text-xl font-semibold text-orange-500 mb-4">React.js</h3>
+                <p class="text-gray-300">Building dynamic, single-page applications with React, utilizing hooks, state management, and component-based architecture.</p>
+            </div>
+
+            <!-- Skill 6: JavaScript -->
+            <div class="bg-slate-600 p-6 rounded-lg shadow-lg text-center">
+                <h3 class="text-xl font-semibold text-orange-500 mb-4">JavaScript</h3>
+                <p class="text-gray-300">Strong understanding of vanilla JavaScript, DOM manipulation, asynchronous programming, and ES6+ features.</p>
+            </div>
+
+            <!-- Skill 7: GSAP Animation -->
+            <div class="bg-slate-600 p-6 rounded-lg shadow-lg text-center">
+                <h3 class="text-xl font-semibold text-orange-500 mb-4">GSAP Animation</h3>
+                <p class="text-gray-300">Creating smooth and engaging animations with GSAP to enhance user experience.</p>
+            </div>
+
+            <!-- Skill 8: MongoDB -->
+            <div class="bg-slate-600 p-6 rounded-lg shadow-lg text-center">
+                <h3 class="text-xl font-semibold text-orange-500 mb-4">MongoDB</h3>
+                <p class="text-gray-300">Experienced in working with MongoDB for NoSQL databases, designing schemas, and managing collections and documents.</p>
+            </div>
+
+            <!-- Skill 9: Express.js -->
+            <div class="bg-slate-600 p-6 rounded-lg shadow-lg text-center">
+                <h3 class="text-xl font-semibold text-orange-500 mb-4">Express.js</h3>
+                <p class="text-gray-300">Building server-side applications using Express, creating RESTful APIs and handling routes and middleware.</p>
+            </div>
+
+            <!-- Skill 10: Node.js -->
+            <div class="bg-slate-600 p-6 rounded-lg shadow-lg text-center">
+                <h3 class="text-xl font-semibold text-orange-500 mb-4">Node.js</h3>
+                <p class="text-gray-300">Creating backend services and APIs using Node.js, with a focus on scalability and performance.</p>
+            </div>
+        </div>
+    </div>
+    
+</section>
+    <!-- achievement -->
+    <div class="h-fit w-screen ">
+        <!-- Heading -->
+        <div class="h-fit max-w-screen md:pl-28  flex justify-center">
+            <div class="relative group text-center items-center h-fit  w-fit mt-3">
+                <h2 id="projects-heading" class="text-4xl h-fit w-fit font-mono font-bold text-center text-zinc-300 mb-2">
+                    <span class="text-orange-400">M</span>y <span class="text-orange-400">A</span>chievement
+                    <span class="absolute left-1/2 transform -translate-x-1/2 bottom-0 bg-white h-[2px] w-0 group-hover:w-full transition-all duration-300"></span>
+                </h2>
+            </div>
+        </div>
+    
+        <!-- Container -->
+        <div class="h-fit mr-5 w-[94%] mx-auto px-5">
+            <!-- Content -->
+            <div class=" max-w-screen-2xl p-5 rounded-lg shadow-lg">
+                <!-- Achievement 1 -->
+                <div class="bg-white p-6 mb-5 rounded-lg shadow-md" style="padding-left: 28px; padding-right: 14px;">
+                    <h3 class="text-2xl font-semibold mb-2">
+                        <span class="text-orange-500">A</span>ward-Winning <span class="text-orange-500">A</span>nimated Website at Rachna 2<span class="text-orange-500">k</span>24
+                    </h3>
+                    <p class="text-lg w-full text-gray-700">
+                        I participated in the <strong><span class="text-orange-500">R</span>achna 2<span class="text-orange-500">k</span>24</strong> one-day project competition at <strong><span class="text-orange-500">A</span>ll Saint's College of Technology, Bhopal</strong>. I created an animated website themed around <strong><span class="text-orange-500">P</span>irates of the <span class="text-orange-500">C</span>aribbean</strong>, which included dynamic animations, interactive elements, and a captivating user interface.
+                        My project was well-received and I was honored to receive an <strong><span class="text-orange-500">A</span>ward</strong> for my work. This experience helped me enhance my skills in web design and animation.
+                    </p>
+                </div>
+    
+                <!-- Achievement 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md" style="padding-left: 28px; padding-right: 14px;">
+                    <h3 class="text-2xl font-semibold mb-2">
+                        <span class="text-orange-500">W</span>orkshop on <span class="text-orange-500">W</span>eb Development
+                    </h3>
+                    <p class="text-lg text-gray-700">
+                        During Rachna 2<span class="text-orange-500">k</span>24, I also participated in a workshop that focused on <strong><span class="text-orange-500">A</span>dvanced web <span class="text-orange-500">D</span>evelopment techniques</strong>, including responsive design, animation integration, and modern web technologies. The workshop provided valuable insights and hands-on experience to further my understanding of creating dynamic and interactive websites.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+     <!-- page 4 project page -->
+     <div id="projects" class="h-fit w-full px-10 md:pl-28 md:pr-12 py-12">
+        <!-- Heading -->
+        <div class="text-center ">
+            <div class="relative group inline-block">
+                <h2 id="projects-heading" class="text-4xl font-mono font-bold text-zinc-300 mb-2">
+                    <span class="text-orange-400">M</span>y <span class="text-orange-400">P</span>rojects
+                    <span class="absolute left-1/2 transform -translate-x-1/2 bottom-0 bg-white h-[2px] w-0 group-hover:w-full transition-all duration-300"></span>
+                </h2>
+            </div>
+        </div>
+    
+        <!-- Grid Container for Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+            <!-- Card 1 -->
+            <div class="card h-48 w-full bg-gray-600 rounded-xl shadow-lg flex flex-col items-center justify-center text-center p-4">
+                <h3 class="text-2xl font-semibold text-white mb-2">Catch-The-Creature</h3>
+                <a href="https://prashantk2306.github.io/catch-the-creature/" target="_blank" class="text-orange-400 hover:text-orange-300 underline text-sm">View Project</a>
+            </div>
+            <!-- Card 2 -->
+            <div class="card h-48 w-full bg-gray-600 rounded-xl shadow-lg flex flex-col items-center justify-center text-center p-4">
+                <h3 class="text-2xl font-semibold text-white mb-2">Project 2</h3>
+                <a href="#" target="_blank" class="text-orange-400 hover:text-orange-300 underline text-sm">View Project</a>
+            </div>
+            <!-- Card 3 -->
+            <div class="card h-48 w-full bg-gray-600 rounded-xl shadow-lg flex flex-col items-center justify-center text-center p-4">
+                <h3 class="text-2xl font-semibold text-white mb-2">Empthy 3</h3>
+                <a href="#" target="_blank" class="text-orange-400 hover:text-orange-300 underline text-sm">View Project</a>
+            </div>
+            <!-- Card 4 -->
+            <div class="card h-48 w-full bg-gray-600  rounded-xl shadow-xl flex flex-col items-center justify-center text-center p-4">
+                <h3 class="text-2xl font-semibold text-white mb-2">Empthy 4</h3>
+                <a href="#" target="_blank" class="text-orange-400 hover:text-orange-300 underline text-sm">View Project</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- page 5 contact -->
+     <div>
+        <!-- Contact Page Section -->
+<section id="contact" class="bg-gray-900 text-white py-16 px-6">
+    <div class="max-w-4xl mx-auto">
+      <!-- Heading -->
+      <div class="text-center">
+        <div class="relative group inline-block">
+            <h2 id="projects-heading" class="text-4xl font-mono font-bold text-zinc-300 mb-2">
+                <span class="text-orange-400">C</span>ontact<span class="text-orange-400"> M</span>e
+                <span class="absolute left-1/2 transform -translate-x-1/2 bottom-0 bg-white h-[2px] w-0 group-hover:w-full transition-all duration-300"></span>
+            </h2>
+        </div>
+    </div>
+            <p class="text-center mt-5 text-gray-400 mb-12">
+        Interested in working together or just want to say hi? Fill out the form below or use the contact details provided.
+      </p>
+  
+      <!-- Contact Information -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 text-center">
+        <div>
+          <h3 class="text-lg  font-mono font-semibold text-gray-200 mb-2"><span class="text-orange-400">P</span>hone</h3>
+          <p class="text-gray-400">+91 7091735051</p>
+        </div>
+        <div>
+            <h3 class="text-lg  font-mono font-semibold text-gray-200 mb-2"><span class="text-orange-400">A</span>ddress</h3>
+            <p class="text-gray-400">Sundarpatti, Gopalganj (Bihar) 841428, India</p>
+        </div>
+      </div>
+  
+      <!-- Contact Form -->
+      <form class="space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Name -->
+          <div>
+            <label for="name" class="block text-gray-400 text-sm mb-2">Your Name</label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              placeholder="Enter your name" 
+              class="w-full bg-gray-800 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+              required
+            />
+          </div>
+          <!-- Email -->
+          <div>
+            <label for="email" class="block text-gray-400 text-sm mb-2">Your Email</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              placeholder="Enter your email" 
+              class="w-full bg-gray-800 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+              required
+            />
+          </div>
+        </div>
+        <!-- Message -->
+        <div>
+          <label for="message" class="block text-gray-400 text-sm mb-2">Message</label>
+          <textarea 
+            id="message" 
+            name="message" 
+            rows="6" 
+            placeholder="Write your message here..."
+            class="w-full bg-gray-800 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+            required
+          ></textarea>
+        </div>
+        <!-- Submit Button -->
+        <div class="text-center">
+          <button 
+            type="submit" 
+            class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-medium shadow-md"
+          >
+            Send Message
+          </button>
+        </div>
+      </form>
+  
+      <!-- Social Media Links -->
+      <div class="mt-12 text-center">
+        <p class="text-gray-400 mb-4">Or connect with me on</p>
+        <div class="flex justify-center space-x-6">
+          <a href="https://www.instagram.com/prashant_sharma_2306/profilecard/?igsh=amp0Y2FjdjNqNGZh" class="text-gray-400 hover:text-orange-500 transition">
+            <i class="fab fa-linkedin fa-lg">instagram</i>
+          </a>
+          <a href="https://www.facebook.com/share/19TjZVDc6U/" class="text-gray-400 hover:text-orange-500 transition">
+            <i class="fab fa-github fa-lg">facebook</i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-orange-500 transition">
+            <i class="fab fa-twitter fa-lg"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+     </div>
+
+    <!-- GSAP Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- External Script -->
+    <script src="script.js"></script>
+</body>
+</html>
